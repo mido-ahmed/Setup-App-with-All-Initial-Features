@@ -12,7 +12,7 @@ class NasaScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: SizedBox(
-          width: MediaQuery.sizeOf(context).width * .7,
+          width: MediaQuery.sizeOf(context).width * .74,
           height: MediaQuery.sizeOf(context).height * .1,
           child: FilledButton(
             onPressed: () => context.pop(),

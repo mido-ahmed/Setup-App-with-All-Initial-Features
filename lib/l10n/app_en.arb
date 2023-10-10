@@ -1,6 +1,7 @@
 {
   "helloWorld": "Hello World",
   "home": "Home",
-  "goToHome" : "Go To Home",
-  "goToNasa" : "Go To Nasa"
+  "goToHome": "Go To Home",
+  "goToNasa": "Go To Nasa",
+  "nasaWord": "Nasa World"
 }

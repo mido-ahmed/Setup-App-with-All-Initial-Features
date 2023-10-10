@@ -5,13 +5,13 @@ import 'package:sizer/sizer.dart';
 final textTheme = TextTheme(
   displayLarge: GoogleFonts.inter(
     fontWeight: FontWeight.w400,
-    fontSize: 57.sp,
+    fontSize: 57,
     height: 64 / 57,
     letterSpacing: -0.25,
   ),
-  displayMedium: GoogleFonts.cairo(
+  displayMedium: GoogleFonts.autourOne(
     fontWeight: FontWeight.w400,
-    fontSize: 45.sp,
+    fontSize: 35,
     height: 52 / 45,
   ),
   displaySmall: GoogleFonts.inter(
@@ -73,7 +73,7 @@ final textTheme = TextTheme(
   ),
   bodyMedium: GoogleFonts.inter(
     fontWeight: FontWeight.w400,
-    fontSize: 16.sp,
+    fontSize: 16,
     height: 20 / 14,
   ),
   bodySmall: GoogleFonts.inter(

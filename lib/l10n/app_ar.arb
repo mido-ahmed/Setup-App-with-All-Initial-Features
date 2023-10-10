@@ -2,5 +2,6 @@
   "helloWorld": "اهلا بك",
   "home": "الرئيسيه",
   "goToHome": "للرئيسيه",
-  "goToNasa": "لناسا"
+  "goToNasa": "لناسا",
+  "nasaWord" : "عالم ناسا"
 }

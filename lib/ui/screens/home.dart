@@ -22,15 +22,11 @@ class HomeScreen extends StatelessWidget {
           width: MediaQuery.sizeOf(context).width * .75,
           child: ListView(
             children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1UX1GrpnOMWYcQpoEKilLsqALNn0JrgSAg&usqp=CAU",
-                    ),
-                  ),
+              DrawerHeader(
+                child: Text(
+                  AppLocalizations.of(context)!.nasaWord,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
-                child: Text(""),
               ),
               ValueListenableBuilder(
                 valueListenable: Hive.box(settingsBox).listenable(),
@@ -51,7 +47,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              width: MediaQuery.sizeOf(context).width * .7,
+              width: MediaQuery.sizeOf(context).width * .71,
               height: MediaQuery.sizeOf(context).height * .1,
               child: FilledButton(
                 onPressed: () => context.push(news),
