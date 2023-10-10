@@ -11,7 +11,7 @@ final textTheme = TextTheme(
   ),
   displayMedium: GoogleFonts.cairo(
     fontWeight: FontWeight.w400,
-    fontSize: 45,
+    fontSize: 45.sp,
     height: 52 / 45,
   ),
   displaySmall: GoogleFonts.inter(
