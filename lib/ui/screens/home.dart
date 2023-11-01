@@ -54,10 +54,23 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           )),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [],
+          children: [
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width * .71,
+              height: MediaQuery.sizeOf(context).height * .1,
+              child: FilledButton(
+                onPressed: () => context.push(news),
+                child: Text(
+                  AppLocalizations.of(context)!.goToNasa,
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+              ),
+            ),
+
+          ],
         ),
       ),
     );
