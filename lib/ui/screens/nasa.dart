@@ -10,19 +10,19 @@ class NasaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SizedBox(
-          width: MediaQuery.sizeOf(context).width * .74,
-          height: MediaQuery.sizeOf(context).height * .1,
-          child: FilledButton(
-            onPressed: () => context.pop(),
-            child: Text(
-              AppLocalizations.of(context)!.goToHome,
-              style: Theme.of(context).textTheme.displayMedium,
-            ),
+      appBar: AppBar(
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            size: 30,
           ),
         ),
       ),
+      body: Center(),
     );
   }
 }

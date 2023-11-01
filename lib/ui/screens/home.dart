@@ -58,8 +58,13 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              AppLocalizations.of(context)!.seePictures,
+              style: Theme.of(context).textTheme.displayMedium,
+            ),
+            const SizedBox(height: 15),
             SizedBox(
-              width: MediaQuery.sizeOf(context).width * .71,
+              width: MediaQuery.sizeOf(context).width * .75,
               height: MediaQuery.sizeOf(context).height * .1,
               child: FilledButton(
                 onPressed: () => context.push(news),
@@ -69,7 +74,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-
           ],
         ),
       ),

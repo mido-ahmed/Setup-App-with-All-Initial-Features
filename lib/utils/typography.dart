@@ -11,7 +11,8 @@ final textTheme = TextTheme(
   ),
   displayMedium: GoogleFonts.autourOne(
     fontWeight: FontWeight.w400,
-    fontSize: 35,
+    color: Colors.black,
+    fontSize: 30,
     height: 52 / 45,
   ),
   displaySmall: GoogleFonts.inter(
