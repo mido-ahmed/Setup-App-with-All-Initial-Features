@@ -40,36 +40,24 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
               ),
+              ValueListenableBuilder(
+                valueListenable: Hive.box(settingsBox).listenable(),
+                builder: (context, box, _) {
+                  String language = settings.get(languageValue) ?? "en";
+                  return Switch(
+                    value: language == "en",
+                    onChanged: (val) {
+                      settings.put(languageValue, val ? "en" : "ar");
+                    },
+                  );
+                },
+              ),
             ],
           )),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              width: MediaQuery.sizeOf(context).width * .71,
-              height: MediaQuery.sizeOf(context).height * .1,
-              child: FilledButton(
-                onPressed: () => context.push(news),
-                child: Text(
-                  AppLocalizations.of(context)!.goToNasa,
-                  style: Theme.of(context).textTheme.displayMedium,
-                ),
-              ),
-            ),
-            ValueListenableBuilder(
-              valueListenable: Hive.box(settingsBox).listenable(),
-              builder: (context, box, _) {
-                String language = settings.get(languageValue) ?? "en";
-                return Switch(
-                  value: language == "en",
-                  onChanged: (val) {
-                    settings.put(languageValue, val ? "en" : "ar");
-                  },
-                );
-              },
-            ),
-          ],
+          children: [],
         ),
       ),
     );
