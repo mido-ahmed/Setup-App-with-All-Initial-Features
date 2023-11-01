@@ -3,13 +3,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:spacepictures/utils/color_schemes.g.dart';
 import 'package:spacepictures/utils/constants.dart';
 import 'package:spacepictures/utils/custome_router.dart';
+import 'package:spacepictures/utils/hive_managment.dart';
 import 'package:spacepictures/utils/typography.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  await Hive.openBox(settingsBox);
+  await HiveManagment.initHive();
   runApp(MyApp(appRouter: AppRouter()));
 }
 

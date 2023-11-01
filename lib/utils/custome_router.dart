@@ -13,7 +13,7 @@ class AppRouter {
       ),
       GoRoute(
         path: news,
-        builder: (context, state) => const NasaScreen(),
+        builder: (context, state) =>  NasaScreen(),
       ),
     ],
     errorBuilder: (context, state) {
